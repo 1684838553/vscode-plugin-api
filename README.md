@@ -44,3 +44,48 @@ vscode.commands.executeCommand('setContext', 'show', true);
 #### 3. treeView Part
 
 ![位置](./image/part.png)
+
+### 4. timeline
+
+![位置](./image/timeline.png)
+
+```typescript
+// package.json  contributes menu timeline/title
+
+"timeline/title": [
+  {
+    "command": "nodeDependencies.addEntry",
+    "when": "show",
+    "group": "navigation"
+  }
+]
+
+// 右键
+"timeline/item/context":[
+  {
+    "command": "nodeDependencies.addEntry",
+    "when": "show",
+    "group": "navigation"
+  }
+]
+```
+
+### notebook
+
+![位置](./image/notebook-toolbar.png)
+
+```typescript
+// package.json  contributes menu notebook/toolbar
+
+"notebook/toolbar":[
+  {
+    "command": "nodeDependencies.addEntry",
+    "when": "show",
+    "group": "navigation"
+  }
+]
+```
+
+### when
+
+当 `when` 为 `false` 时，actionViewItem 不展示，直接删除 dom 上的节点，而不是设置样式隐藏该节点

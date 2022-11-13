@@ -36,6 +36,13 @@
 					"title": "Package Explorer",
 					"icon": "media/dep.svg"
 				}
+			],
+			"panel": [
+				{
+					"id": "gitlensPanel",
+					"title": "GitDrunk",
+					"icon": "$(gitlens-gitlens)"
+				}
 			]
 		},
 		"views": {
@@ -233,6 +240,27 @@
 			"timeline/item/context":[
 				{
 					"command": "nodeDependencies.addEntry",
+					"when": "show",
+					"group": "navigation"
+				}
+			],
+			"notebook/toolbar":[
+				{
+					"command": "nodeDependencies.addEntry",
+					"when": "show",
+					"group": "navigation"
+				}
+			],
+			"notebook/cell/title":[
+				{
+					"command": "nodeDependencies.addEntry",
+					"when": "show",
+					"group": "navigation"
+				}
+			],
+			"scm/title":[
+				{
+					"command": "nodeDependencies.refreshEntry",
 					"when": "show",
 					"group": "navigation"
 				}
